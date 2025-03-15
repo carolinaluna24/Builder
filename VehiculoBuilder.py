@@ -7,6 +7,7 @@ class VehiculoBuilder:
         self.ruedas = 0
         self.motor = None
         self.color = None
+        self.modelo = 0
  #Proporciona métodos para establecer cada atributo (set_tipo, set_ruedas, set_motor, set_color) 
  
     def set_tipo(self, tipo):
@@ -24,7 +25,11 @@ class VehiculoBuilder:
     def set_color(self, color):
         self.color = color
         return self
+    
+    def set_modelo(self, modelo):
+        self.modelo = modelo
+        return self
  ## y el método build() para crear una instancia de Vehiculo.       
  
     def build(self):
-        return Vehiculo(self.tipo, self.ruedas, self.motor, self.color)
+        return Vehiculo(self.tipo, self.ruedas, self.motor, self.color, self.modelo)
